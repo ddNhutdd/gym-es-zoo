@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules//bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>QUẢN LÍ THÚ</h1>
+            </div>
+        </div>
+
+        <form id="form" onsubmit="submitHandle(event)">
+            <div class=" row align-items-center">
+                <div class="col-2">
+                    <div>Nhập tên thú: </div>
+                </div>
+                <div class="col-6">
+                    <div class="input-group">
+                        <input id="nameInput" type="text" class="form-control" placeholder="tên thú" required>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <button type="submit" class="btn btn-success">Thêm</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="row">
+
+            <div class="col-12 my-3">
+                <input onkeyup="searchKeyupHandle()" id="searchInput" type="text" class="form-control"
+                    placeholder="tên thú">
+            </div>
+            <div class="col-12">
+                <table class="table caption-top">
+                    <thead>
+                        <tr>
+                            <th scope="col">Tên thú</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyTable">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12">
+                <Button onclick="printListAnimal()" class="btn btn-success">Danh sách thú</Button>
+                <ul id="listAnimal"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src=" ./main.js"></script>
+</body>
+
+</html>
